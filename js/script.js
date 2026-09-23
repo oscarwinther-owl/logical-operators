@@ -1,5 +1,6 @@
-// Husk fra dag 1: skriv "use strict" herunder
 "use strict";
+// Husk fra dag 1: skriv "use strict" herunder
+
 
 function tjekRabat(brand, price) {
 
@@ -19,8 +20,18 @@ function tjekRabat(brand, price) {
     //   - log `${brand} er omfattet af kampagnen. Ny pris: ${finalPrice} kr.`
     // Ellers:
     //   - log `${brand} er ikke omfattet af kampagnen. Pris: ${finalPrice} kr.`
+        if ((brand === `Volkswagen` || brand === `Skoda`) && (price < 300000)) {
+        finalPrice = finalPrice - 20000;
+        console.log (`${brand} er omfattet af kampagnen. Ny pris: ${finalPrice} kr.`);
+    } else {
+        console.log (`${brand} er ikke omfattet af kampagnen. Pris: ${finalPrice} kr.`);
 
-}
+
+
+    }
+
+
+    }
 
 tjekRabat(`Volkswagen`, 250000);
 tjekRabat(`Skoda`, 320000);
